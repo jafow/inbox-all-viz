@@ -3,21 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "eslint *.js",
+    "build": "rollup -c",
+    "serve": "python -m http.server"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "d3-axis": "^1.0.12",
+    "d3-fetch": "^1.1.2",
+    "d3-scale-chromatic": "^1.3.3",
+    "d3-selection": "^1.3.2",
+    "rollup": "^0.68.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "uglify-js": "^3.4.9"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-eslint": "^3.2.0",
-    "@vue/cli-service": "^3.2.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
-    "vue-template-compiler": "^2.5.17"
+    "tachyons": "^4.10.0"
   },
   "eslintConfig": {
     "root": true,

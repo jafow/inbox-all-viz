@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>inbox-all-charts</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but inbox-all-charts doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="frame"></div>
+    <script src="./app.js"></script>
+    <!-- <script src="./bundle.js" async type="application/javascript"></script> -->
+    <script>
+        app.csv('./src/assets/data/bubbles.csv')
+          .then(function onCsvSuccess (data) {
+            console.log("data: ", data)
+            app.select("#frame").append("p").text("hola mundo")
+        })
+        .catch(function onCsvErr (err) {
+            var e = new Error(err)
+            console.dir("Failed to fetch file: ", e)
+            return e
+        })
+        console.log('hit')
+    </script>
+  </body>
+</html>
+
