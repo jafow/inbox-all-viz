@@ -5,15 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="dist/tachyons.min.css" title="" type="" />
     <title>inbox-all-charts</title>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but inbox-all-charts doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <article>
+        <header class="bg-light-red sans-serif">
+            <div class="mw9 center pa4 pt5-ns ph7-l">
+            <time class="f6 mb2 dib ttu tracked"><small>December 2018</small></time>
+            <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
+                <span class="bg-black-90 lh-copy white pa1 tracked-tight">All of our words.</span>
+            </h3>
+            <h4 class="f3 fw1 georgia i">A story with data about (almost) all of the words my wife and I have written to each other.</h4>
+            <h5 class="f6 ttu tracked black-80">By Jared Fowler</h5>
+            </div>
+        </header>
+        <section>
+            <div class="pa4 ph7-l georgia mw9-l center">
+                <p class="f5 f3-ns lh-copy measure georgia">
+                    In the summer of 2018 I downloaded the entirety of my gmail
+                    account. I couldn't resist reading old emails and chat
+                    messages I'd written and received with my girlfriend, who
+                    then became my fiance, and then my wife. I thought it would be interesting to apply
+                    some data analysis and visualization tools to these messages. This web site
+                    is the result of that.
+                </p>
+                <p id="sub1-return" class="f6 f4-ns lh-copy measure georgia">
+                    The first<a href="#sub1">₁</a> email I sent to her was on
+                    3rd December 2008, and sounds right grandmotherly.
+                </p>
+                <p class="f6 f5-ns lh-copy measure i pl4 bl bw1 b--light-red mb4">
+                    Baby, be careful driving today. It's snowing hard.
+                    Leave for class with plenty of time and drive slow. Please.
+                    xoxo
+                </p>
+                <p class="f5 f4-ns lh-copy measure mb4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </section>
+    </article>
+
     <div id="frame"></div>
-    <script src="./app.js"></script>
-    <!-- <script src="./bundle.js" async type="application/javascript"></script> -->
+    <script src="./dist/app.js"></script>
     <script>
         app.csv('./src/assets/data/bubbles.csv')
           .then(function onCsvSuccess (data) {
@@ -25,7 +69,6 @@
             console.dir("Failed to fetch file: ", e)
             return e
         })
-        console.log('hit')
     </script>
   </body>
 </html>

@@ -22,3 +22,6 @@ yarn-error.log*
 
 # data
 src/assets/data/*
+
+# drafts
+*.draft.md
