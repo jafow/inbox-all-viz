@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="stylesheet" href="dist/tachyons.min.css" title="" type="" />
+    <link rel="stylesheet" href="dist/tachyons.min.css" title="tachyons" type="text/css" />
+    <link rel="stylesheet" href="dist/main.css" title="main" type="text/css" />
     <title>inbox-all-charts</title>
   </head>
   <body>
@@ -42,34 +43,29 @@
                     Leave for class with plenty of time and drive slow. Please.
                     xoxo
                 </p>
-                <p class="f5 f4-ns lh-copy measure mb4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                <p id="sub1-return" class="f6 f4-ns lh-copy measure georgia">
+                    Over the next 10 years we would exchange 5,000 emails and chat messages on Gmail products only.
+                    From those messages I pulled the 970 most frequently used words between and plotted them here.
                 </p>
             </div>
+            <div id="frame-all"></div>
+            <div class="pa4 ph7-l georgia mw9-l center">
+                <p class="f5 f4-ns lh-copy measure mb4"> 
+                    I was curious to see how often the word "love" appeared. I thought surely it was in the
+                    top 5 words we write to one another.
+                </p>
+                <p class="f5 f4-ns lh-copy measure mb4">
+                    It's <strong>32nd</strong>, falling just behind the words
+                    <i class="italic">work</i>, <i class="italic">need</i>, and
+                    <i class="italic">got</i>. 
+                </p>
+            </div>
+            <div id="frame-love"></div>
         </section>
     </article>
 
-    <div id="frame"></div>
-    <script src="./dist/app.js"></script>
-    <script>
-        app.csv('./src/assets/data/bubbles.csv')
-          .then(function onCsvSuccess (data) {
-            console.log("data: ", data)
-            app.select("#frame").append("p").text("hola mundo")
-        })
-        .catch(function onCsvErr (err) {
-            var e = new Error(err)
-            console.dir("Failed to fetch file: ", e)
-            return e
-        })
-    </script>
+    <script src="./dist/bundle.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
 

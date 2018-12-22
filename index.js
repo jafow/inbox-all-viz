@@ -1,2 +1,5 @@
 export {select} from 'd3-selection'
 export {csv} from 'd3-fetch'
+export {scaleOrdinal} from 'd3-scale'
+export {schemeCategory10} from 'd3-scale-chromatic'
+export {pack, hierarchy} from 'd3-hierarchy'
