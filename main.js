@@ -36,8 +36,13 @@ function makeBubbles (rows, elId, colorFilter=identity) {
 
 function highlightLove (rows, elId, colorFilter) {
   const g = setupSvg(rows.map(r => Object.assign(r, {freq_t: r.freq * 50000})), elId)
+  const easeOut = d3.easeQuadOut
+  const easeIn = d3.easeQuadIn
 
-  g.append('circle')
+  const transIn = d3.transition().duration(220).delay(10).ease(easeOut)
+  const transOut = d3.transition().duration(120).ease(easeIn)
+
+  const circles = g.append('circle')
       .attr('r', d => d.freq_t)
       .attr('cx', (d) => d.word === 'love' ? (width + margin.horiz) / 5 : Math.random() * width)
       .attr('cy', (d) => d.word === 'love' ? (height + margin.vert) / 2.5 : Math.random() * height)
